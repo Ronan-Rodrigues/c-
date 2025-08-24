@@ -76,10 +76,17 @@ void moveCavalo(int movimentoC, int lado){
 int main() {
 system("chcp 65001 > null"); // Define UTF-8 no terminal do Windows
     
+    int opcao = 1;
+
+    do {
+    
     //Declaração de variaveis 
     int opcoe;
 
+        switch (opcao){
 
+        case 1:
+       
     //iniciando o jogo de xadrez...
     printf("=====================================\n");
     printf("iniciando o jogo de xadrez...\n");
@@ -93,46 +100,54 @@ system("chcp 65001 > null"); // Define UTF-8 no terminal do Windows
     printf("=====================================\n");
     scanf("%d", &opcoe); // Entrada do usuario para escolha da peça
 
-    if (opcoe > 0 && opcoe < 5){
+        if (opcoe > 0 && opcoe < 5){
         
-    switch (opcoe)
-    {
-    case 1:
-        printf("=====================================\n");
-        printf("A Opção escolhida foi Torre \n"); 
-        printf("=====================================\n");
-        moveTorre(5);
+            switch (opcoe){
+                case 1:
+            printf("=====================================\n");
+            printf("A Opção escolhida foi Torre \n"); 
+            printf("=====================================\n");
+            moveTorre(5);
 
-        break;
-    case 2:
-        printf("=====================================\n");
-        printf("A Opção escolhida foi Bispo \n"); 
-        printf("=====================================\n");
-        moveBispo(5,5);
-        break;
-    case 3:
-        printf("=====================================\n");
-        printf("A Opção escolhida foi Rainha \n");
-        printf("=====================================\n");
-        moveRainha(8);
-        
-        break;
-    case 4:
-        printf("=====================================\n");
-        printf("A Opção escolhida foi Cavalo \n"); 
-        printf("=====================================\n");   
-        moveCavalo(3,2);     
-        break;
+            break;
+        case 2:
+            printf("=====================================\n");
+            printf("A Opção escolhida foi Bispo \n"); 
+            printf("=====================================\n");
+            moveBispo(5,5);
+            break;
+        case 3:
+            printf("=====================================\n");
+            printf("A Opção escolhida foi Rainha \n");
+            printf("=====================================\n");
+            moveRainha(8);
+            
+            break;
+        case 4:
+            printf("=====================================\n");
+            printf("A Opção escolhida foi Cavalo \n"); 
+            printf("=====================================\n");   
+            moveCavalo(3,2);     
+            break;
 
-    default:
-        printf("=====================================\n");
-        printf("Opção Inválida! Escolha de 1 a 4");
-        printf("=====================================\n");
-        break;
+        default:
+            printf("=====================================\n");
+            printf("Opção Inválida! Escolha de 1 a 4");
+            printf("=====================================\n");
+            break;
+        }
+
     }
+        opcao = 0;
+        break;
 
-    
-
-    return 0;
-    }
 }
+        // Verifica se o usuário deseja continuar
+        printf("\nDeseja continuar? (1 - Sim, 0 - Não): ");
+        scanf("%d", &opcao);
+
+    } while (opcao !=0);
+ 
+       return 0;
+        
+    }
