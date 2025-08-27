@@ -62,13 +62,29 @@ int main() {
         }
 
         if (escolhajogador == escolhaComputador) {
+             printf("\n");
+                          printf("===========================\n");
+
             printf("Empate!\n");
+                         printf("===========================\n");
+
+             printf("\n");
         } else if ((escolhajogador == 1 && escolhaComputador == 3) ||
                    (escolhajogador == 2 && escolhaComputador == 1) ||
                    (escolhajogador == 3 && escolhaComputador == 2)) {
+                     printf("\n");
+                         printf("===========================\n");
             printf("Você venceu!\n");
+             printf("===========================\n");
+
+             printf("\n");
         } else {
+            printf("\n");
+            printf("===========================\n");
             printf("Computador venceu!\n");
+             printf("===========================\n");
+
+             printf("\n");
         }
 
         printf("Deseja jogar novamente? (1 - Sim, 0 - Não): ");
@@ -76,7 +92,11 @@ int main() {
         if (jogarNovamente) {
             main(); // Reinicia o jogo
         } else {
+                         printf("===========================\n");
+
             printf("Obrigado por jogar!\n");
+                         printf("===========================\n");
+
             return 0; // Encerra o programa
         }
     }

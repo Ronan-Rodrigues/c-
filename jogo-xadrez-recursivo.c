@@ -98,6 +98,7 @@ system("chcp 65001 > null"); // Define UTF-8 no terminal do Windows
     printf("3. Rainha \n");
     printf("4. Cavalo \n");
     printf("=====================================\n");
+    printf("Escolha: ");
     scanf("%d", &opcoe); // Entrada do usuario para escolha da peça
 
         if (opcoe > 0 && opcoe < 5){
